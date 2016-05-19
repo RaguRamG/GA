@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="js/index.js"></script>
+    </head>
+    
+    <body>
+        
+        <div class='container-fluid'>
+            <h1><center>Find Your Cloud Service</center></h1><br/><br/>
+            <div class="col-sm-6">
+            <center><b>Quantifiable Parameters</b></center>
+            </div>
+            <div class="col-sm-6">
+            <center><b>Non-Quantifiable Parameters (Quantified)</b></center>
+            </div>
+            <br/><br/>
+            <form class="form-horizontal" action="python/Main.cgi" method="post">
+                <label class="control-label col-sm-offset-1 col-sm-2">Cost per month</label>
+                <div class="col-sm-1">
+                    <input type="text" name="cpm" value="0" class="form-control" />
+                    <!--<select class="form-control" name="cpm">
+                         <option value="0">00</option>
+                        <option value="1">01</option>
+                        <option value="2">02</option>
+                        <option value="3">03</option>
+                        <option value="4">04</option>
+                        <option value="5">05</option>
+                        <option value="6">06</option>
+                        <option value="7">07</option>
+                        <option value="8">08</option>
+                        <option value="9">09</option>
+                        <option value="10">10</option>
+                    </select>-->
+                </div>
+                <span class="col-sm-1">$/month</span>
+                <label class="control-label col-sm-offset-2 col-sm-2">Availability</label>
+                <div class="col-sm-1">
+                    <input type="text" name="avail" value="0" class="form-control" />
+                    <!--<select class="form-control" name="avail">
+                         <option value="0">00</option>
+                        <option value="1">01</option>
+                        <option value="2">02</option>
+                        <option value="3">03</option>
+                        <option value="4">04</option>
+                        <option value="5">05</option>
+                        <option value="6">06</option>
+                        <option value="7">07</option>
+                        <option value="8">08</option>
+                        <option value="9">09</option>
+                        <option value="10">10</option>
+                    </select>-->
+                </div>
+                <span class="col-sm-1">%</span>
+                <br/><br/>
+                <label class="control-label col-sm-offset-1 col-sm-2">Base Plan Price</label>
+                <div class="col-sm-1">
+                    <input type="text" name="bpp" value="0" class="form-control" />
+                    <!--<select class="form-control" name="bpp">
+                         <option value="0">00</option>
+                        <option value="1">01</option>
+                        <option value="2">02</option>
+                        <option value="3">03</option>
+                        <option value="4">04</option>
+                        <option value="5">05</option>
+                        <option value="6">06</option>
+                        <option value="7">07</option>
+                        <option value="8">08</option>
+                        <option value="9">09</option>
+                        <option value="10">10</option>
+                    </select>-->
+                </div>
+                <span class="col-sm-1">$/hr</span>
+                <label class="control-label col-sm-offset-2 col-sm-2">Security</label>
+                <div class="col-sm-1">
+                    <input type="text" name="sec" value="0" class="form-control" />
+                    <!--<select class="form-control" name="sec">
+                        <option value="0">00</option>
+                        <option value="1">01</option>
+                        <option value="2">02</option>
+                        <option value="3">03</option>
+                        <option value="4">04</option>
+                        <option value="5">05</option>
+                        <option value="6">06</option>
+                        <option value="7">07</option>
+                        <option value="8">08</option>
+                        <option value="9">09</option>
+                        <option value="10">10</option>
+                    </select>-->
+                </div>
+                <span class="col-sm-1">hrs</span>
+                <br/><br/>
+                <label class="control-label col-sm-offset-1 col-sm-2">RAM</label>
+                <div class="col-sm-1">
+                    <input type="text" name="ram" value="0" class="form-control" />
+                    <!--<select class="form-control" name="ram">
+                         <option value="0">00</option>
+                        <option value="1">01</option>
+                        <option value="2">02</option>
+                        <option value="3">03</option>
+                        <option value="4">04</option>
+                        <option value="5">05</option>
+                        <option value="6">06</option>
+                        <option value="7">07</option>
+                        <option value="8">08</option>
+                        <option value="9">09</option>
+                        <option value="10">10</option>
+                    </select>-->
+                </div>
+                <span class="col-sm-1">MB</span>
+                <label class="control-label col-sm-offset-2 col-sm-2">Service Credit</label>
+                <div class="col-sm-1">
+                    <input type="text" name="sc" value="0" class="form-control" />
+                    <!--<select class="form-control" name="sc">
+                         <option value="0">00</option>
+                        <option value="1">01</option>
+                        <option value="2">02</option>
+                        <option value="3">03</option>
+                        <option value="4">04</option>
+                        <option value="5">05</option>
+                        <option value="6">06</option>
+                        <option value="7">07</option>
+                        <option value="8">08</option>
+                        <option value="9">09</option>
+                        <option value="10">10</option>
+                    </select>-->
+                </div>
+                <span class="col-sm-1">%</span>
+                <br/><br/>
+                <label class="control-label col-sm-offset-1 col-sm-2">Disk Space</label>
+                <div class="col-sm-1">
+                    <input type="text" name="disk" value="0" class="form-control" />
+                    <!--<select class="form-control" name="disk">
+                         <option value="0">00</option>
+                        <option value="1">01</option>
+                        <option value="2">02</option>
+                        <option value="3">03</option>
+                        <option value="4">04</option>
+                        <option value="5">05</option>
+                        <option value="6">06</option>
+                        <option value="7">07</option>
+                        <option value="8">08</option>
+                        <option value="9">09</option>
+                        <option value="10">10</option>
+                    </select>-->
+                </div>
+                <span class="col-sm-1">GB</span>
+                <br/><br/>
+                <label class="control-label col-sm-offset-1 col-sm-2">Bandwidth</label>
+                <div class="col-sm-1">
+                    <input type="text" name="bw" value="0" class="form-control" />
+                    <!--<select class="form-control" name="bw">
+                         <option value="0">00</option>
+                        <option value="1">01</option>
+                        <option value="2">02</option>
+                        <option value="3">03</option>
+                        <option value="4">04</option>
+                        <option value="5">05</option>
+                        <option value="6">06</option>
+                        <option value="7">07</option>
+                        <option value="8">08</option>
+                        <option value="9">09</option>
+                        <option value="10">10</option>
+                    </select>-->
+                </div>
+                <span class="col-sm-1">Mbps</span>
+                <br/><br/>
+                <label class="control-label col-sm-offset-1 col-sm-2">Processor Speed</label>
+                <div class="col-sm-1">
+                    <input type="text" name="speed" value="0" class="form-control" />
+                    <!--<select class="form-control" name="speed">
+                         <option value="0">00</option>
+                        <option value="1">01</option>
+                        <option value="2">02</option>
+                        <option value="3">03</option>
+                        <option value="4">04</option>
+                        <option value="5">05</option>
+                        <option value="6">06</option>
+                        <option value="7">07</option>
+                        <option value="8">08</option>
+                        <option value="9">09</option>
+                        <option value="10">10</option>
+                    </select>-->
+                </div>
+                <span class="col-sm-1">GHz</span>
+                <br/><br/>
+                <label class="control-label col-sm-offset-1 col-sm-2">Virtual CPU Cores</label>
+                <div class="col-sm-1">
+                    <input type="text" name="core" value="0" class="form-control" />
+                    <!--<select class="form-control" name="core">
+                         <option value="0">00</option>
+                        <option value="1">01</option>
+                        <option value="2">02</option>
+                        <option value="3">03</option>
+                        <option value="4">04</option>
+                        <option value="5">05</option>
+                        <option value="6">06</option>
+                        <option value="7">07</option>
+                        <option value="8">08</option>
+                        <option value="9">09</option>
+                        <option value="10">10</option>
+                    </select>-->
+                </div>
+                <span class="col-sm-1">vCPU(s)</span>
+                <br/><br/>
+                <div class="form-group">
+                    <div class="col-sm-offset-5 col-sm-2">
+                    <button type="submit" class="btn btn-success btn-block">Get CSP</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </body>
+    
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
